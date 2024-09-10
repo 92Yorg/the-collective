@@ -1,5 +1,14 @@
 <!-- Find this style block in Page Content (Visible) on XYZ document in kentico -->
 <style type="text/css">
+  :root {
+    --pink: #F06468;
+    --teal: #66BAC9;
+    --orange: #EFB255;
+    --white: #fff;
+    --black: #000;
+    ;
+  }
+
   .media-panels .o-grid__item:nth-of-type(3n + 1) {
     margin-left: 0;
   }
@@ -8,6 +17,46 @@
       margin: 0 auto;
       width: unset;
       height: auto;
+    }
+  }
+
+  .logo-grid__item {
+    max-width: 300px;
+  }
+  .logo-grid__subtitle {
+    padding: 0 10px;
+  }
+  .logo__media {
+    width: 100%;
+    height: 100px;
+    max-width: 300px;
+    padding-bottom: 5px;
+  }
+  img[id$="_itemImage"] {
+    padding: 5px;
+  }
+
+  @media (min-width: 50em) {
+    .logo__media {
+      height: 80px;
+      padding: 0px 0;
+    }
+  }
+
+/* Visible on subpages Pagecontent Bottom */
+
+  h3.media-panels__title {
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+  @media (max-width: 50em) {
+    #your-events .ms-hero__body {
+      padding-bottom: 1em;
+    }
+  }
+  @media (min-width: 50em) {
+    #your-events .ms-hero__body {
+      padding-top: 60px;
     }
   }
 </style>
