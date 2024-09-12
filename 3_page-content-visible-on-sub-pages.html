@@ -1,23 +1,65 @@
 <!-- Find this style block in Page Content (Visible) on XYZ document in kentico -->
 <style type="text/css">
   :root {
-    --pink: #F06468;
-    --teal: #66BAC9;
-    --orange: #EFB255;
+    --pink: #f06468;
+    --teal: #66bac9;
+    --orange: #efb255;
     --sand: #f2ebe4;
     --white: #fff;
     --black: #000;
-    ;
+  }
+
+  .u-tone-background-sand {
+    background-color: #f2ebe4;
+  }
+
+  .u-tone-background-teal {
+    background-color: var(--teal);
+  }
+
+  .u-tone-background-pink {
+    background-color: var(--pink);
+  }
+
+  .btn:active,
+  .btn:hover,
+  .inline-button:active,
+  .inline-button:hover,
+  [type="submit"]:active,
+  [type="submit"]:hover,
+  .program-card:hover .program-card__actions .btn:active,
+  .program-card:hover .program-card__actions .btn:hover {
+    background-color: var(--pink);
+    color: var(--black);
+  }
+
+  .u-tone-background-teal .btn:active,
+  .u-tone-background-teal .btn:hover,
+  .u-tone-background-teal .inline-button:active,
+  .u-tone-background-teal .inline-button:hover,
+  .u-tone-background-teal [type="submit"]:active,
+  .u-tone-background-teal [type="submit"]:hover {
+    background-color: var(--white);
+    color: var(--black);
   }
 
   .media-panels .o-grid__item:nth-of-type(3n + 1) {
     margin-left: 0;
   }
+
+  #intro .ms-hero__inner {
+    padding: 1.5em;
+  }
+
   @media (max-width: 49.99em) {
     .media-panel__media {
       margin: 0 auto;
       width: unset;
       height: auto;
+    }
+
+    .ms-hero__body {
+      padding: 20px 20px;
     }
   }
 
@@ -44,7 +86,7 @@
     }
   }
 
-/* Visible on subpages Pagecontent Bottom */
+  /* Visible on subpages Pagecontent Bottom */
 
   h3.media-panels__title {
     margin-top: 50px;
