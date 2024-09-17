@@ -80,7 +80,9 @@
 		}
 
 
-
+		#js-popup-membership.popup-container {
+			max-width: 800px;
+		}
 
 
 
@@ -88,8 +90,12 @@
 
 
 		    .ms-hero__body {
-		      padding: 20px 20px;
+		      padding: 0;
 		    }
+
+			.ms-hero__title {
+				font-size: 1.5rem;
+			}
 
 
 		  .logo-grid__item {
@@ -118,46 +124,135 @@
 		    padding-bottom: 20px;
 		  }
 
-	          @media (min-width: 35em) {
+		  .flex-grid__item {
+			margin-bottom: 10px;
+			text-align: left;
+		}
+
+		  
+
+	          /* @media (min-width: 35em) {
 		 #intro .ms-hero__inner {
 		    padding: 1.5em;
 		  }
-		  }
+		  } */
 
 	         @media (max-width: 49.99em) {
 		    .media-panel__media {
 		      margin: 0 auto;
 		      width: 50%;
 		      height: auto;
+			  #your-events .ms-hero__body {
+		      padding-bottom: 1em;
+		    }
+
+	            .media-panel__title {
+	       font-size: .875rem;
 		    }
         }
 
-		  @media (min-width: 50em) {
+		  
+
+	   
+    }
+
+	@media (min-width: 50em) {
 		    .logo__media {
 		      height: 80px;
 		      padding: 0px 0;
 		    }
 
 	           	    #your-events .ms-hero__body {
-		      padding-top: 60px;
+		      padding-top: 2em;
 		    }
+
+			.flex-grid__item {
+			width: calc(33.33% - 20px); /* This changes 4-up to 3-up. Remove to get 4-up. */
+			max-width: calc(50% - 20px);
+			text-align: center;
+			}
 		  }
 
-
-		  .program-list {
-		    min-height: 0;
-		  }
-
+	#your-events .flex-grid {
+		justify-content: left;
+	}
 
 
+	.program-list {
+	min-height: 0;
+	}
 
-		  @media (max-width: 50em) {
-		    #your-events .ms-hero__body {
-		      padding-bottom: 1em;
-		    }
-        
-	            .media-panel__title {
-	       font-size: .875rem;
-	   }
-    }
 
+	#access-benefits {
+		position: relative;
+	}
+
+	div#access-benefits:after {
+		content: "&nbsp;";
+		position: absolute;
+		bottom: 0;
+		display: block;
+		background: #000;
+		width: 100%;
+		height: calc(50% - 2em);
+	}
+	
+	#access-benefits .ms-hero__inner {
+		width: 650px;
+		max-width: calc(100% - 32px);
+		padding: 3em 1em;
+		margin: 0 auto;
+		border-radius: 60px 0;
+		position: relative;
+    	z-index: 2;
+	}
+
+	@media (min-width: 50em) {
+		#access-benefits {
+			padding: 4em 0 3em;
+		}
+		#access-benefits .ms-hero__inner {
+			padding: 4em 1em;
+		}
+	}
+
+
+	/* Photo Strip */
+
+	.photo-strip ul {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		gap: 4px;
+		flex-flow: wrap;
+	}
+
+	.photo-strip ul li {
+		width: 32%;
+    	max-width: 50%;
+    	flex-grow: 1;
+	}
+
+	.photo-strip ul li img {
+		object-fit: cover;
+		margin: 0;
+		width: 100%;
+  		height: 100%;
+	}
+
+	@media (min-width: 35em) {
+		.photo-strip {
+			padding-top: 60px;
+		}
+		.photo-strip ul {
+			height: 16vw;
+			flex-flow: unset;
+		}
+		.photo-strip ul li:nth-child(odd) {
+			width: 16%;
+		}
+
+		.photo-strip ul li:nth-child(even) {
+			width: 26%;
+		}
+	}
