@@ -29,6 +29,10 @@
 		    fill: var(--teal);
 		  }
 
+		  .ms-hero {
+			letter-spacing: -.01em;
+		  }
+
 
 
 		  .btn:active,
@@ -65,7 +69,7 @@
 		  #hero-logo {
 		    padding-top: 2em;
 			background: rgb(242,235,228);
-			background: linear-gradient(0deg, rgba(242,235,228,1) 50%, rgba(102,186,201,1) 100%);
+			background: linear-gradient(0deg, rgba(242,235,228,1) 70%, rgba(102,186,201,1) 100%);
 		  }
 
 		  .logo-wrapper {
@@ -129,7 +133,43 @@
 			text-align: left;
 		}
 
-		  
+		#featured-event {
+			margin: 2em 0;
+		}
+
+		#featured-event .flex-grid {
+			padding-bottom: 0;
+			margin: 0;
+		}
+
+		#featured-event .flex-grid__item {
+			margin: 0;
+		}
+
+		#featured-event h3 {
+			margin: 0;
+			font-weight: 400;
+		}
+
+		@media (max-width: 29.99em) {
+			#featured-event .program-card:not(.program-card--featured) .program-card__media {
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 50em) {
+			#featured-event  {
+				max-width: 500px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			#featured-event .flex-grid__item {
+				max-width: 100%;
+				margin: 0
+			}
+		}
+
 
 	          /* @media (min-width: 35em) {
 		 #intro .ms-hero__inner {
